@@ -1149,3 +1149,193 @@ a{
 }
 /* Start Events */
 
+/* Start Pricing */
+#pricing{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: #ECECEC;
+}
+#pricing .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+#pricing .box{
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    -webkit-box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+    position: relative;
+    z-index: 1;
+}
+#pricing .box::before,
+#pricing .box::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 50%;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+#pricing .box::before{
+    right: 0;
+    top: 0
+}
+#pricing .box::after{
+    left: 0;
+    bottom: 0;
+}
+#pricing .box:hover::before,
+#pricing .box:hover::after{
+    width: 100%
+}
+#pricing .advanced{
+    transform: translateY(-30px);
+}
+@media (max-width: 991px){
+    #pricing .advanced{
+        transform: translateY(0);
+    }
+}
+#pricing .box .label{
+    background-color: var(--main-color);
+    color: #fff;
+    width: 43px;
+    writing-mode: vertical-rl;
+    padding: 10px 10px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+#pricing .box .label::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-width: 21.5px;
+    border-style: solid;
+    border-color: transparent transparent #fff;
+    transition: var(--main-transition);
+}
+#pricing .box:hover .label::after{
+    border-color: transparent transparent #f6f6f6;
+}
+#pricing .box .info h3{
+    margin: 25px auto;
+    font-weight: bold;
+    font-size: 25px;
+}
+#pricing .box .info img{
+    width: 100px
+}
+#pricing .box .info p:first-of-type{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 25px auto 10px;
+}
+#pricing .box .info p:last-of-type{
+    color: #777;
+    margin-bottom: 15px;
+}
+#pricing .box .features{
+    text-align: left;
+}
+#pricing .box .features li{
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+}
+#pricing .box .features li i{
+    color: var(--main-color);
+    margin-right: 10px
+}
+#pricing .box a{
+    display: block;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px auto 10px;
+    width: fit-content;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 18px;
+    transition: var(--main-transition);
+}
+#pricing .box a:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+/* End Pricing */
+
+/* Start Videos */
+#videos{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+#videos .container{
+    display: flex;
+}
+#videos .content > div{
+    border: 1px solid #eee;
+    border-collapse: separate;
+}
+#videos .content .head{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F4F4;
+    color: var(--main-color)
+}
+#videos .content .box{
+    padding: 20px 40px 20px 20px;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+#videos .content .box:hover{
+    background-color: #FAFAFA;
+}
+#videos .content .box p{
+    transition: var(--main-transition);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+#videos .content .box:hover p{
+    color: var(--main-color)
+}
+#videos .content .box span{
+    color: #777
+}
+#videos .preview{
+    background-color: #E2E2E2;
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+#videos .preview img{
+    max-width: 100%;
+}
+#videos .preview p{
+    padding: 15px;
+    width: 100%;
+    background-color: #fff;
+    font-size: 18px;
+}
+@media (max-width: 991px){
+    #videos .container{
+        flex-direction: column;
+    }
+    #videos .preview{
+        width: 100%;
+    }
+}
+/* End Videos */
+
