@@ -1339,3 +1339,174 @@ a{
 }
 /* End Videos */
 
+
+/* Start Statistics */
+#stats{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: #ECECEC;
+    background-image: linear-gradient(#ececece8, #ECECEC), url("../images/stats.jpg");
+    background-size: cover;
+}
+#stats .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px
+}
+#stats h2{
+    padding: 10px;
+    margin: 0 auto 80px;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 28px;
+    letter-spacing: -1px;
+    transition: var(--main-transition);
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+#stats .box{
+    padding: 25px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+#stats .box::before,
+#stats .box::after{
+    content: '';
+    width: 3px;
+    height: 0;
+    position: absolute;
+    background-color: var(--main-color);
+    transition: 0.7s;
+}
+#stats .box::before{
+    left: 0;
+    bottom: 0
+}
+#stats .box::after{
+    right: 0;
+    top: 0
+}
+#stats .box:hover::before,
+#stats .box:hover::after{
+    height: 100%
+}
+#stats .box i{
+    color: #333;
+    margin-bottom: 15px;
+}
+#stats .box .amount{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+#stats .box .title{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+}
+/* End Statistics */
+
+/* Start Discount */
+#discount{
+    display: flex;
+}
+@media (max-width: 991px){
+    #discount{
+        flex-direction: column;
+    }
+}
+#discount .text{
+    padding: 50px;
+    text-align: center;
+    flex: 1;
+    color: #fff;
+    position: relative;
+    background-image: url('../images/discount-background1.jpg');
+    background-size: cover;
+    z-index: 1;
+    animation: change-background 10s linear infinite
+}
+#discount .text::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #2196f3f7;
+    z-index: -1;
+}
+#discount h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin: 20px auto 30px
+}
+#discount .text p{
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+#discount .text img{
+    max-width: 100%;
+    width: 60%;
+}
+#discount .order{
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+#discount .order form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 70%
+}
+#discount .order form .input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc !important;
+    background-color: #f9f9f9;
+    padding: 15px;
+    caret-color: var(--main-color);
+}
+#discount .order form .input:focus{
+    outline: none;
+}
+#discount .order form textarea{
+    height: 200px;
+    resize: none;
+}
+#discount .order form input[type="submit"]{
+    color: #fff;
+    background-color: var(--main-color);
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+@keyframes change-background{
+    0%, 100%{
+        background-image: url('../images/discount-background1.jpg');
+    }
+    50%{
+        background-image: url('../images/discount-background2.jpg');
+    }
+}
+/* End Discount */
+
